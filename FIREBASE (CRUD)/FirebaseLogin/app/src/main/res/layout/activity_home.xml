@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:background="@color/white"
+        android:textColor="@android:color/white">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:background="@drawable/btn_bg"
+            android:onClick="btnNew"
+            android:textStyle="bold|italic"
+            android:textSize="20sp"
+            android:text="@string/add"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-6dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlContainerHeaderHome"
+            android:layout_below="@id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/txvUsernameWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/opensansbold"
+                tools:text="Welcome, User"/>
+
+            <ImageButton
+                android:id="@+id/ibCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_bag"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/brand_row"/>
+
+</LinearLayout>

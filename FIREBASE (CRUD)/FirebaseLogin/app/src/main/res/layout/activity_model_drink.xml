@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModelDrinkActivity"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rlPicture"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@drawable/ic_cocktail"
+        android:alpha=".8">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/bg_item"
+        android:layout_alignBottom="@id/rlPicture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/txvModelName"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansbold"
+            android:layout_above="@+id/txvModelDesc"
+            tools:text="Brahma"/>
+
+        <TextView
+            android:id="@+id/txvModelDesc"
+            android:textStyle="italic"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="descrição muito boa da bebida"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlItem"
+        android:layout_below="@id/rlPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/txvModelId"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1DB954"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/opensansextrabold"
+            tools:text="(-MStXkodRjGpyXKWNLjv)"/>
+
+        <TextView
+            android:id="@+id/txvModelBrand"
+            android:layout_below="@+id/txvModelId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/opensansregular"
+            tools:text="Marca: Brahma"/>
+
+        <TextView
+            android:id="@+id/txvModelPrice"
+            android:layout_below="@+id/txvModelBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B3B3B3"
+            android:textSize="20sp"
+            android:fontFamily="@font/opensanslight"
+            tools:text="Un.: R$ 6,99"/>
+
+        <TextView
+            android:id="@+id/txvModelSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvModelPrice"
+            android:fontFamily="@font/opensanslight"
+            android:textColor="#B3B3B3"
+            android:textSize="20sp"
+            tools:text="Subtotal: R$ 30,69"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txvModelSubtotal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/txvModelBrand"
+            android:layout_alignBottom="@id/txvModelSubtotal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignTop="@id/txvModelQuantity"
+                android:layout_toStartOf="@id/txvModelQuantity"
+                android:textColor="@color/white"
+                android:fontFamily="@font/opensansbold"
+                tools:text="Qnt"/>
+
+            <TextView
+                android:id="@+id/txvModelQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#80C699"
+                android:textStyle="bold"
+                android:textSize="70sp"
+                android:textAlignment="center"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/opensanslight"
+                android:text="1"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="@drawable/bg_qnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnAddCart"
+            android:layout_alignEnd="@+id/btnAddCart"
+            android:layout_above="@id/btnAddCart"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txvSubtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="50sp"
+                android:fontFamily="@font/hammersmithoneregular"
+                android:paddingHorizontal="35dp"
+                android:layout_marginHorizontal="15dp"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/txvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="50sp"
+                android:fontFamily="@font/hammersmithoneregular"
+                android:paddingHorizontal="35dp"
+                android:layout_marginHorizontal="15dp"
+                android:text="+"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddCart"
+            android:onClick="btnAddToCart"
+            android:background="@drawable/bg_btn_item"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            tools:text="Adicionar ao carrinho (R$ xx,xx)"
+            app:shapeAppearance="@style/Theme.Design.Light"
+            app:backgroundTint="#1DB954"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "708618845836",
+    "project_id": "otp-test-cea5d",
+    "storage_bucket": "otp-test-cea5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708618845836:android:e6ddc460aa26a38b5105a9",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708618845836-mv28k29fum927irmguk7fe1tcor5nfi5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaselogin",
+            "certificate_hash": "5209bdfdbe593a232551b8ca90b6b7ff6a5ecab0"
+          }
+        },
+        {
+          "client_id": "708618845836-5pqaifte4hckvlteg8eqq03g4dp3solc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpJSD796iRr3Z7lzwom4VhPRrryhxklPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708618845836-5pqaifte4hckvlteg8eqq03g4dp3solc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

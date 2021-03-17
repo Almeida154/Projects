@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".CartActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlContainerHeaderCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:background="@color/white"
+        android:paddingBottom="30dp">
+
+        <ImageButton
+            android:id="@+id/imBack"
+            android:onClick="imBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/keyboard_arrow_left_colorful3"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:id="@+id/ivCart"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/imBack"
+            android:layout_alignStart="@id/imBack"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_bag"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imBack"
+            android:layout_toEndOf="@id/ivCart"
+            android:layout_alignTop="@id/ivCart"
+            android:layout_alignBottom="@id/ivCart"
+            android:layout_marginStart="16dp"
+            android:textSize="22sp"
+            android:text="Sua sacola"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvCartEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlContainerHeaderCart"
+        android:layout_above="@id/rlContainerFooterCart"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="#C5C5C5"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="Carrinho vazio :/"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartItem"
+        android:layout_below="@+id/rlContainerHeaderCart"
+        android:layout_above="@+id/rlContainerFooterCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/cart_item"/>
+
+    <RelativeLayout
+        android:id="@+id/rlContainerFooterCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="30dp"
+        android:paddingHorizontal="30dp"
+        android:elevation="20dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rlContainerDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txvCartCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensansbold"
+                android:text="Adicionar cupom de desconto"/>
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_alignParentEnd="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/keyboard_arrow_right"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_below="@id/rlContainerDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="#F1F1F1"/>
+
+        <TextView
+            android:id="@+id/txvCartPrice"
+            android:layout_below="@+id/viewLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensanslight"
+            android:text="Total"/>
+
+        <TextView
+            android:id="@+id/txvTotal"
+            android:layout_below="@+id/txvCartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="@font/opensansregular"
+            android:text="R$ 0,00"/>
+
+        <Button
+            android:id="@+id/btnCheckOut"
+            android:onClick="btnCheckOut"
+            android:layout_alignTop="@+id/txvCartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Finalizar pedido"
+            android:background="@drawable/bg_btn_checkout"
+            app:backgroundTint="@color/black"
+            app:shapeAppearance="@style/Theme.Design.Light"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

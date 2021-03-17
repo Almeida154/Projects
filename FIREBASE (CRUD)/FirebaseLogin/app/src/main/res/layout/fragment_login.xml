@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment"
+    android:background="#F8F8F8"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/edtLoginEmail"
+        android:hint="@string/edtLogin01"
+        android:textColorHint="#B6B6B6"
+        android:backgroundTint="#B6B6B6"
+        android:textStyle="bold"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress|textNoSuggestions"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtLoginPassword"
+        android:hint="@string/edtLogin02"
+        android:textColorHint="#B6B6B6"
+        android:backgroundTint="#B6B6B6"
+        android:textStyle="bold"
+        android:layout_width="285dp"
+        android:layout_below="@+id/edtLoginEmail"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingBottom="20dp"/>
+
+    <RelativeLayout
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtLoginPassword"
+        android:layout_alignStart="@+id/edtLoginPassword"
+        android:layout_alignEnd="@+id/edtLoginPassword">
+
+        <TextView
+            android:id="@+id/txvForgotPassword"
+            android:paddingVertical="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/forgot_password"
+            android:textColor="#8E8E8E"/>
+
+        <ImageButton
+            android:id="@+id/ibLogin"
+            android:background="@drawable/circle"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true">
+        </ImageButton>
+
+    </RelativeLayout>
+
+</RelativeLayout>

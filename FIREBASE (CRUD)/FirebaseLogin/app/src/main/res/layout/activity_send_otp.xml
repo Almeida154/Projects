@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".SendOTPActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlContainerFather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlContainer"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/blueDif"/>
+
+            <ImageButton
+                android:id="@+id/imBack"
+                android:onClick="imBack"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/keyboard_arrow_left_colorful"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/rlContainer"
+                android:background="@drawable/ic_wave3"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_message"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txvOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlContainerFather"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="@string/textOTP"/>
+
+        <TextView
+            android:id="@+id/txvOTPDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvOTP"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="@string/textOTPDesc"/>
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txvOTPDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="@string/br"/>
+
+            <EditText
+                android:id="@+id/edtNumberOPT"
+                android:layout_marginStart="10dp"
+                android:hint="@string/edtOPTSend"
+                android:textColorHint="#B6B6B6"
+                android:backgroundTint="#B6B6B6"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:importantForAutofill="no"
+                android:inputType="number|textNoSuggestions"
+                android:maxLength="14"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llContainer"
+            android:layout_alignStart="@id/txvOTPDesc"
+            android:layout_alignEnd="@id/txvOTPDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:paddingVertical="5dp">
+
+            <Button
+                android:id="@+id/btnGetCode"
+                android:onClick="btnGetCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient"
+                android:text="@string/get_code"
+                android:elevation="10dp"/>
+
+            <ProgressBar
+                android:id="@+id/pbGettingOPT"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

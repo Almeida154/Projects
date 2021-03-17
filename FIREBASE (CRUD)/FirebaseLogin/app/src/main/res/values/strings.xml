@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FirebaseLogin</string>
+    <string name="welcome">Hi there,\nWelcome!</string>
+
+    <string name="edtLogin01">Email</string>
+    <string name="edtLogin02">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+
+    <string name="edtReg01">Username</string>
+    <string name="edtReg02">Email</string>
+    <string name="edtReg03">Password</string>
+
+    <string name="textRecovery">Recovery password with\nyour email</string>
+    <string name="remembered_password">I remembered my password</string>
+    <string name="edtRec01">Email</string>
+
+    <string name="textOTP">OTP Verification</string>
+    <string name="textOTPDesc">We\'ll send you an \"One Time Code\" on this\nmobile phone</string>
+    <string name="br">+55</string>
+    <string name="edtOPTSend">Number phone</string>
+    <string name="get_code">GET CODE</string>
+
+    <string name="textOTPCheck">OTP Verification</string>
+    <string name="codeNull">Didn\'t receive the code?</string>
+    <string name="resend_code">RESEND CODE</string>
+    <string name="verify">Verify</string>
+    <string name="add">Add</string>
+    <string name="marcas">Marcas</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="price">Preço</string>
+    <string name="product">Produto</string>
+    <string name="txtReg">Cadastre</string>
+    <string name="id">Id</string>
+    <string name="txtUpdt">Edite</string>
+    <string name="editar">Editar</string>
+    <string name="discart">X</string>
+    <string name="cupons">Cupons</string>
+    <string name="cancel">Cancelar</string>
+    <string name="aplicar">Aplicar</string>
+
+</resources>

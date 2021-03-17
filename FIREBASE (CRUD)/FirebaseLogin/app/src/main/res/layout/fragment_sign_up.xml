@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment"
+    android:background="#F8F8F8"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/edtRegUsername"
+        android:hint="@string/edtReg01"
+        android:textColorHint="#B6B6B6"
+        android:backgroundTint="#B6B6B6"
+        android:textStyle="bold"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:importantForAutofill="no"
+        android:inputType="text|textNoSuggestions"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtRegEmail"
+        android:hint="@string/edtReg02"
+        android:textColorHint="#B6B6B6"
+        android:backgroundTint="#B6B6B6"
+        android:textStyle="bold"
+        android:layout_width="285dp"
+        android:layout_below="@+id/edtRegUsername"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:importantForAutofill="no"
+        android:inputType="text|textNoSuggestions|textEmailAddress"
+        android:paddingBottom="20dp"
+        tools:ignore="TextFields"/>
+
+    <EditText
+        android:id="@+id/edtRegPassword"
+        android:hint="@string/edtReg03"
+        android:textColorHint="#B6B6B6"
+        android:backgroundTint="#B6B6B6"
+        android:textStyle="bold"
+        android:layout_width="285dp"
+        android:layout_below="@+id/edtRegEmail"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingBottom="20dp"/>
+
+    <ImageButton
+        android:id="@+id/ibSignUp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/ic_arrow_right"
+        android:layout_alignEnd="@id/edtRegPassword"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/edtRegPassword">
+    </ImageButton>
+
+
+</RelativeLayout>
