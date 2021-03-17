@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:onClick="ivBack"
+        android:padding="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <TextView
+        android:id="@+id/txvText"
+        android:layout_alignStart="@id/edtProductLayoutAdd"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtReg"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtProductLayoutAdd"
+        android:layout_below="@+id/txvText"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/TextLabel"
+        android:layout_marginTop="50dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/product"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:boxCornerRadiusTopStart="3dp"
+        app:boxCornerRadiusTopEnd="3dp"
+        app:boxBackgroundColor="#222222"
+        app:hintTextColor="@android:color/secondary_text_light_nodisable"
+        app:counterTextColor="@android:color/white"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtProductAdd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text|textNoSuggestions|textCapWords"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtPriceLayoutAdd"
+        android:layout_below="@+id/edtProductLayoutAdd"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/TextLabel"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/price"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:boxCornerRadiusTopStart="3dp"
+        app:boxCornerRadiusTopEnd="3dp"
+        app:boxBackgroundColor="#222222"
+        app:hintTextColor="@android:color/secondary_text_light_nodisable"
+        app:counterTextColor="@android:color/white"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPriceAdd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:background="@drawable/btn_bg"
+        android:textColor="@android:color/white"
+        android:onClick="btnAdd"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:text="@string/reg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-6dp"/>
+
+
+</RelativeLayout>

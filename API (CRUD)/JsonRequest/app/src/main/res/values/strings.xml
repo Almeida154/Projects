@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JsonRequest</string>
+    <string name="add">Nova bebida</string>
+    <string name="reg">Cadastrar</string>
+    <string name="product">Produto</string>
+    <string name="txtReg">Cadastre uma nova\nbebida</string>
+    <string name="price">Preço</string>
+    <string name="menu">Menu</string>
+    <string name="id">Id</string>
+    <string name="txtUpdt">Edite a bebida</string>
+    <string name="updt">Editar</string>
+</resources>

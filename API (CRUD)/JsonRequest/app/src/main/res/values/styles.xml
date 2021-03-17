@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#171717</item>
+        <item name="colorPrimaryDark">#303030</item>
+        <item name="colorAccent">#DA0909</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.Design.TextInputLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="hintTextAppearance">@android:color/white</item>
+        <item name="android:colorForeground">@android:color/white</item>
+        <item name="colorControlActivated">#DC3545</item>
+    </style>
+
+    <style name="dialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorOnPrimarySurface">#9E9E9E</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorPrimary">#E91100</item>
+    </style>
+
+</resources>

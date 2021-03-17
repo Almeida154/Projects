@@ -1,0 +1,77 @@
+.btn-primary{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #DC3545;
+    border: 3px  #af2936 solid;
+    transition: 1s;
+    font-weight: 600;
+}
+
+.btn-primary:hover{
+    background-color: #af2936;
+    border: 3px  #af2936 solid;
+    transition: 1s;
+}
+
+.containerMaster{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMaster .wrapper{
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px 40px;
+    box-shadow: 5px 5px 8px 5px #8888884d;
+}
+
+.containerMaster .wrapper h3{
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.line{
+    width: 50%;
+}
+
+.edit, .delete{
+    margin: 0;
+    width: 40%;
+    float: left;
+    
+}
+
+.delete{
+    margin-left: 6%;
+}
+
+.edit{
+    background-color: rgb(77, 130, 230);
+    border-color: rgb(37, 85, 173);
+}
+
+.edit:hover{
+    background-color: rgb(37, 85, 173);
+    border-color: rgb(37, 85, 173);
+}
+
+th{
+    font-size: 20px;
+}
+
+td{
+    text-align: center;
+    position: relative;
+}
+
+td p{
+    top: 30%;
+    position: absolute;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+}

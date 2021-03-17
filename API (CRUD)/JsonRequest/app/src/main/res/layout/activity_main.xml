@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:background="@drawable/btn_bg"
+        android:textColor="@android:color/white"
+        android:onClick="btnNew"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:text="@string/add"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="-6dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginVertical="60dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/drink_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>
