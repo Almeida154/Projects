@@ -9,7 +9,8 @@ use App\Drink;
 class DrinkControllerApi extends Controller{
     
     public function listAll(){
-        return Drink::all();
+        // return Drink::all();
+        return json_encode(Drink::all());
     }
 
     public function singleDrink($id){
